@@ -12,16 +12,16 @@ func f(from string) {
 }
 
 func main() {
-	
+
 	f("direct")
 	go f("goroutine")
-	
+
 	// 匿名函数
 	go func(msg string) {
 		fmt.Println(msg)
 	}("going")
-	
+
 	time.Sleep(time.Second * 5)
-	
+
 	fmt.Println("done")
 }

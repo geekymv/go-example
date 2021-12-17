@@ -16,17 +16,17 @@ func main() {
 
 	res := fact(4)
 	fmt.Println(res)
-	
+
 	// 闭包，先声明再定义
 	var fib func(n int) int
-	
+
 	fib = func(n int) int {
 		if n < 2 {
 			return n
 		}
 		return fib(n-1) + fib(n-2)
 	}
-	
+
 	fmt.Println(fib(7))
 
 }

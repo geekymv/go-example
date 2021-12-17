@@ -15,45 +15,39 @@ import (
 )
 
 func main() {
-	
+
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
-	
+
 	s[0] = "a"
 	s[1] = "b"
 	s[2] = "c"
 	fmt.Println("set:", s)
 	fmt.Println("get:", s)
-	
+
 	fmt.Println("len:", len(s))
-	
+
 	// append
 	s = append(s, "d")
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s) // [a b c d e f]
-	
+
 	// copy
 	c := make([]string, len(s))
 	copy(c, s)
 	fmt.Println("cpy:", c)
-	
+
 	// slice[low:high] 包括low，不包括high
 	l := c[2:4]
 	fmt.Println("sl1:", l)
-	
+
 	l = c[2:]
 	fmt.Println("sl2:", l)
-	
+
 	l = c[:4]
 	fmt.Println("sl3:", l)
-	
+
 	t := []string{"g", "h", "i"}
 	fmt.Println("dcl:", t)
-	
-	
-	
-	
-	
-	
-	
+
 }

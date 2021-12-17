@@ -10,10 +10,10 @@ func vals() (int, int) {
 }
 
 func main() {
-	
+
 	a, b := vals()
 	fmt.Println(a, b)
-	
+
 	_, c := vals()
-	fmt.Println(c)	
+	fmt.Println(c)
 }

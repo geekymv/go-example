@@ -11,19 +11,19 @@ func intSeq() func() int {
 	// 返回一个函数
 	return func() int {
 		i++
-		return i;
+		return i
 	}
 }
 
 func main() {
 	nextInt := intSeq()
 	fmt.Println(nextInt())
-	
+
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 
 	nextInts := intSeq()
 	fmt.Println(nextInts())
-	
+
 }
