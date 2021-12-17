@@ -1,13 +1,13 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
 /*
 指定方向的channel
 当使用 channel 作为函数参数的时候，可以指定 channel 只能发送或接收数据，这种方式增加了类型安全。
- */
+*/
 func ping(pings chan<- string, msg string) {
 	// pings 只能接收数据
 	pings <- msg
@@ -32,4 +32,3 @@ func main() {
 	fmt.Println(<-pongs)
 
 }
-
