@@ -18,6 +18,7 @@ func main() {
 
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
+	fmt.Printf("the s len is %d, capacity is %d\n", len(s), cap(s))
 
 	s[0] = "a"
 	s[1] = "b"
@@ -29,6 +30,9 @@ func main() {
 
 	// append
 	s = append(s, "d")
+	// capacity 扩大到原来的2倍
+	fmt.Printf("the s len is %d, capacity is %d\n", len(s), cap(s))
+
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s) // [a b c d e f]
 
