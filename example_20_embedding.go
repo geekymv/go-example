@@ -32,6 +32,13 @@ func main() {
 	fmt.Println("alse num:", co.base.num)
 	fmt.Println("describe:", co.describe())
 
+	// 先声明再赋值
+	var ct container
+	ct.num = 1
+	ct.str = "i am ct"
+	fmt.Println(ct)
+
+
 	type describer interface {
 		describe() string
 	}
