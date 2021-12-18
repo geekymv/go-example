@@ -18,7 +18,7 @@ type geometry interface {
 }
 
 // 矩形
-type rect struct {
+type rectangle struct {
 	width, height float64
 }
 
@@ -33,12 +33,12 @@ To implement an interface in Go, we just need to implement all the methods in th
 */
 
 // 计算矩形面积
-func (r rect) area() float64 {
+func (r rectangle) area() float64 {
 	return r.width * r.height
 }
 
 // 计算矩形周长
-func (r rect) perim() float64 {
+func (r rectangle) perim() float64 {
 	return 2 * (r.width + r.height)
 }
 
@@ -59,11 +59,33 @@ func measure(g geometry) {
 	fmt.Println(g.perim())
 }
 
+// interface{} 是万能数据类型
+func print(args interface{})  {
+
+	// 类型断言，判断参数 args 的数据类型
+	value, ok := args.(string)
+	if ok {
+		fmt.Println("args 的类型是 string", value)
+	}
+
+	fmt.Println(args)
+}
+
+
 func main() {
-	r := rect{width: 3, height: 4}
+
+	var g geometry
+	g = rectangle{width: 1, height: 2}
+	//g = &rectangle{width: 1, height: 2}
+	fmt.Printf("%T\n", g)
+	measure(g)
+
+	r := rectangle{width: 3, height: 4}
 	c := circle{radius: 5}
 
 	measure(r)
 	measure(c)
+
+	print("hello")
 
 }
