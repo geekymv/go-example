@@ -55,6 +55,7 @@ func main() {
 	}
 
 	_, e := f2(42)
+	// e.(*argError) 判断 e 的数据类型是否为 *argError
 	if ae, ok := e.(*argError); ok {
 		fmt.Println(ae.arg)
 		fmt.Println(ae.prob)
