@@ -4,27 +4,56 @@ import (
 	"fmt"
 )
 
-type person struct {
+// int 的别名
+type myInt int
+
+
+type Person struct {
 	name string
 	age  int
 }
 
-func newPerson(name string) *person {
-	p := person{name: name}
+func newPerson(name string) *Person {
+	p := Person{name: name}
 	p.age = 21
 	return &p
 }
 
+func printPerson(p Person) {
+	// 传递一个Person的副本
+	fmt.Println("p name is ", p.name)
+	fmt.Println("p age is ", p.age)
+}
+
+func changeName(p *Person) {
+	// 传递一个指针
+	p.name = "lisi"
+}
+
 func main() {
 
-	fmt.Println(person{"Bob", 20})
-	fmt.Println(person{name: "Alice", age: 30})
-	fmt.Println(person{name: "Fred"})
-	fmt.Println(&person{name: "Ann", age: 40})
+	var i myInt = 10
+	fmt.Printf("type of i is %T\n", i)
+
+	var p1 Person
+	p1.name = "Tom"
+	p1.age = 22
+	printPerson(p1)
+
+	fmt.Println("================")
+
+	changeName(&p1)
+	printPerson(p1)
+
+
+	fmt.Println(Person{"Bob", 20})
+	fmt.Println(Person{name: "Alice", age: 30})
+	fmt.Println(Person{name: "Fred"})
+	fmt.Println(&Person{name: "Ann", age: 40})
 
 	fmt.Println(newPerson("Tony"))
 
-	s := person{name: "Sean", age: 50}
+	s := Person{name: "Sean", age: 50}
 	fmt.Println(s.name)
 
 	sp := &s
