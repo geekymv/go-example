@@ -27,7 +27,7 @@ func main() {
 	time.Sleep(2 * time.Second)
 
 	for i := 0; i < 3; i++ {
-		fmt.Println(<- messages)
+		fmt.Println(<-messages)
 	}
 
 	fmt.Println("main exit")

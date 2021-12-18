@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-
 func main() {
 
 	jobs := make(chan int, 5)
@@ -16,8 +15,7 @@ func main() {
 	go func() {
 		for {
 			// jobs channel 关闭的时候，more返回false
-			j, more := <-jobs
-			if more {
+			if j, more := <-jobs; more {
 				fmt.Println("received job", j)
 			} else {
 				fmt.Println("received all jobs")
@@ -33,6 +31,7 @@ func main() {
 		fmt.Println("send job", j)
 		jobs <- j
 	}
+	// 发送完数据，关闭channel
 	close(jobs)
 	fmt.Println("sent all jobs")
 

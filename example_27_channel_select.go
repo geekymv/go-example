@@ -20,6 +20,7 @@ func main() {
 		c2 <- "two"
 	}()
 
+	// select 可以监控多个 channel 的状态
 	for i := 0; i < 2; i++ {
 		select {
 		case msg1 := <-c1:
