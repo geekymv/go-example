@@ -4,7 +4,27 @@ import (
 	"fmt"
 )
 
+
+func printUsers(users map[string]int) {
+	// map是引用传递
+	for k, v := range users {
+		fmt.Println("k = ", k, ", v = ", v)
+	}
+}
+
 func main() {
+
+	var mp map[string]int
+	if mp == nil {
+		fmt.Println("mp is nil")
+	}
+
+	/*
+	在使用map前需要先使用make分配数据空间
+	The make built-in function allocates and initializes an object of type slice, map, or chan (only).
+	*/
+	mp = make(map[string]int)
+	mp["k1"] = 1
 
 	// make(map[key-type]val-type)
 	m := make(map[string]int)
@@ -33,5 +53,21 @@ func main() {
 	// 声明并初始化map
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
+
+	users := map[string]int{
+		"baby": 100,
+		"jack": 90,
+		"bob": 98, // 最后一行要有逗号
+	}
+	fmt.Println("users:", users)
+
+	// 遍历
+	printUsers(users)
+
+
+	// 删除
+	delete(users, "bob")
+	fmt.Println("users:", users)
+
 
 }
