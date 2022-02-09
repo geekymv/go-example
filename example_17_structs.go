@@ -53,6 +53,7 @@ func main() {
 
 	fmt.Println(newPerson("Tony"))
 
+	// 初始化结构体
 	s := Person{name: "Sean", age: 50}
 	fmt.Println(s.name)
 

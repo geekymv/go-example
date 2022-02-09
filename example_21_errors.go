@@ -9,6 +9,7 @@ import (
 查看文章 https://go.dev/blog/error-handling-and-go
 */
 
+// 返回了 error 类型
 func f1(arg int) (int, error) {
 	if arg == 42 {
 		return -1, errors.New("can't work with 42")
@@ -23,7 +24,7 @@ type argError struct {
 	prob string
 }
 
-// 实现Error方法
+// 实现 error 接口的 Error() 方法
 func (e *argError) Error() string {
 	return fmt.Sprintf("%d - %s", e.arg, e.prob)
 }
