@@ -20,6 +20,7 @@ func (s Student) setName(name string) {
 	s.name = name
 }
 
+// 成员函数
 func (s *Student) setName2(name string)  {
 	s.name = name
 }
