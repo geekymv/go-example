@@ -8,7 +8,7 @@ import (
 
 func intSeq() func() int {
 	i := 0
-	// 返回一个函数
+	// 返回一个函数，内部函数使用外部函数变量
 	return func() int {
 		i++
 		return i
