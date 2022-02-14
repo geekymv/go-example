@@ -5,11 +5,11 @@ import "os"
 func main() {
 	//panic("a problem")
 
-	file, err := os.Create("/tmp/1.txt")
-
-	if err != nil {
+	// 在 if 块中处理错误
+	if file, err := os.Create("/tmp/1.txt"); err != nil {
 		panic(err)
+	} else {
+		file.Close()
 	}
 
-	file.Close()
 }
