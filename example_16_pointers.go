@@ -14,6 +14,12 @@ func zeroptr(iptr *int) {
 
 func main() {
 
+	x := 1
+	p := &x // p 是整型指针，指向 x，p 包含 x 的地址
+	fmt.Println(*p) // 1
+	*p = 2
+	fmt.Println(x) // 2
+
 	i := 1
 	fmt.Println("initial:", i)
 

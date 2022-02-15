@@ -54,4 +54,8 @@ func main() {
 	t := []string{"g", "h", "i"}
 	fmt.Println("dcl:", t)
 
+	//
+	friends := []string{"tom", "bob", "jack"}
+	fmt.Println(friends)
+
 }

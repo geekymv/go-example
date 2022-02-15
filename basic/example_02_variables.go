@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	var a = "initial"
@@ -19,8 +22,19 @@ func main() {
 	fmt.Println(e)
 
 	// var f string  = "apple"
-	// := 这种比较常用
+	// := 短变量声明，这种比较常用
 	f := "apple"
 	fmt.Println(f)
+
+
+	file, err := os.Open("1.txt")
+	fmt.Println(file)
+	fmt.Println(err)
+
+	// 短变量声明最少声明一个新变量，否则代码编译将无法通过
+	// file, err := os.Open("2.txt")
+	file, err = os.Open("2.txt")
+
+
 
 }

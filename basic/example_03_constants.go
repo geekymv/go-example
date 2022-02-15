@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 const s string = "constant"
@@ -18,4 +19,9 @@ func main() {
 	fmt.Println(d)
 
 	fmt.Println(int64(d))
+
+	// 常量，圆周率
+	fmt.Println(math.Pi)
+
+	fmt.Println(time.Sunday)
 }
