@@ -24,8 +24,9 @@ func main() {
 	for i := 1; i <= 5; i++ {
 		wg.Add(1)
 
-		// 为了避免在每个 goroutine 中使用相同的 i
+		// 捕获迭代变量，为了避免在每个 goroutine 中使用相同的 i
 		i := i
+		// goroutine 会推迟函数的执行时机
 		go func() {
 			myWorker2(i, &wg)
 		}()
