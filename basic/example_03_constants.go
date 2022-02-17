@@ -8,6 +8,18 @@ import (
 
 const s string = "constant"
 
+
+type NodeType int32
+
+const (
+	ErrorNode NodeType = iota
+	TextNode
+	DocumentNode
+	ElementNode
+	DoctypeNode
+)
+
+
 func main() {
 
 	fmt.Println(s)
