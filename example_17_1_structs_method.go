@@ -4,14 +4,13 @@ import (
 	"fmt"
 )
 
-
 // 类名、属性名、方法大小写，大写表示公有的，其他包可以访问，小写表示私有的，本包可以访问
 type Student struct {
 	name string
-	age int
+	age  int
 }
 
-func (s Student) getName() string  {
+func (s Student) getName() string {
 	return s.name
 }
 
@@ -21,7 +20,7 @@ func (s Student) setName(name string) {
 }
 
 // 成员函数
-func (s *Student) setName2(name string)  {
+func (s *Student) setName2(name string) {
 	s.name = name
 }
 
@@ -30,7 +29,6 @@ func (s Student) Show() {
 	fmt.Println("s name is ", s.name)
 	fmt.Println("s age is ", s.age)
 }
-
 
 func main() {
 
