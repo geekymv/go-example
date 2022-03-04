@@ -16,13 +16,13 @@ func updateArr(names [4]string) {
 
 /*
 Slice 包含了指向底层数组元素的指针，会修改原始数组
+切片作为函数参数，实际传递的是切片的内部表示，性能损耗很小，甚至可以忽略不计。
 */
 func updateSlice(names []string) {
 	for i, v := range names {
 		names[i] = strings.ToUpper(v)
 	}
 }
-
 
 func main() {
 
@@ -39,8 +39,7 @@ func main() {
 	updateArr(namesArr)
 	fmt.Println(namesArr)
 
-
-	s := []string{0:"a", 1:"2"}
+	s := []string{0: "a", 1: "2"}
 	fmt.Printf("%T, %v\n", s, s)
 
 }

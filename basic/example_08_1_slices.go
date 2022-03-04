@@ -14,8 +14,12 @@ import (
 	"fmt"
 )
 
+/*
+切片在 Go 运行时的内部表示
+src/runtime/slice.go
+*/
 func main() {
-
+	// len cap = 3
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
 	fmt.Printf("the s len is %d, capacity is %d\n", len(s), cap(s))
