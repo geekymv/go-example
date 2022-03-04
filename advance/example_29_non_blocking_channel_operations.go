@@ -29,7 +29,6 @@ func main() {
 		fmt.Println("no message sent")
 	}
 
-
 	signals := make(chan bool)
 
 	select {

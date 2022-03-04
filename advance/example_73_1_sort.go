@@ -1,8 +1,8 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 type StringSlice []string
@@ -12,7 +12,7 @@ func (s StringSlice) Len() int {
 	return len(s)
 }
 
-func (s StringSlice) Less(i, j int) bool{
+func (s StringSlice) Less(i, j int) bool {
 	return s[i] < s[j]
 }
 
@@ -27,6 +27,3 @@ func main() {
 
 	fmt.Println(names)
 }
-
-
-

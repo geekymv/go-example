@@ -1,12 +1,11 @@
 package main
 
 import (
-	"net/http"
 	"fmt"
 	"io/ioutil"
+	"net/http"
 	"os"
 )
-
 
 func sendHttp(url string) (string, error) {
 	// 发送 http 请求
@@ -29,17 +28,15 @@ func sendHttp(url string) (string, error) {
 	return string(content), nil
 }
 
-
 func main() {
 
 	url := "http://www.baidu.com1"
 
 	if content, err := sendHttp(url); err != nil {
 		fmt.Fprintf(os.Stderr, err.Error())
-	}else {
+	} else {
 
 		fmt.Println(content)
 	}
-
 
 }

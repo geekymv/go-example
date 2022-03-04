@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func reflectName(arg interface{})  {
+func reflectName(arg interface{}) {
 	fmt.Println("type:", reflect.TypeOf(arg))
 	fmt.Println("value:", reflect.ValueOf(arg))
 }

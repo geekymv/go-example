@@ -7,7 +7,6 @@ import (
 // int 的别名
 type myInt int
 
-
 type Person struct {
 	name string
 	age  int
@@ -44,7 +43,6 @@ func main() {
 
 	changeName(&p1)
 	printPerson(p1)
-
 
 	fmt.Println(Person{"Bob", 20})
 	fmt.Println(Person{name: "Alice", age: 30})

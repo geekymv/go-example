@@ -6,15 +6,14 @@ import (
 )
 
 type User struct {
-	Id int
+	Id   int
 	Name string
-	Age int
+	Age  int
 }
 
 func (u User) Call() {
 	fmt.Printf("name = %s", u.Name)
 }
-
 
 func DoFieldAndMethod(input interface{}) {
 	// 获取类型
@@ -40,8 +39,6 @@ func DoFieldAndMethod(input interface{}) {
 		fmt.Printf("%s : %v\n", method.Name, method.Type)
 	}
 }
-
-
 
 func main() {
 	u := User{1, "tom", 18}

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -28,6 +28,5 @@ func main() {
 
 	done <- true
 	fmt.Println("Ticker stopped")
-
 
 }

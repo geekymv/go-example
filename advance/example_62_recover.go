@@ -6,7 +6,6 @@ func mayPanic() {
 	panic("a problem")
 }
 
-
 func main() {
 
 	// Catch the panic

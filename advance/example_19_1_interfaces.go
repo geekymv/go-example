@@ -60,7 +60,7 @@ func measure(g geometry) {
 }
 
 // interface{} 是万能数据类型
-func print(args interface{})  {
+func print(args interface{}) {
 
 	// 类型断言，判断参数 args 的数据类型
 	value, ok := args.(string)
@@ -70,7 +70,6 @@ func print(args interface{})  {
 
 	fmt.Println(args)
 }
-
 
 func main() {
 

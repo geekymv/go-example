@@ -9,18 +9,17 @@ import (
 JSON 中只有以大写字母开头的公有属性才能编码和解码
 */
 type response1 struct {
-	Page int
-	total int
+	Page   int
+	total  int
 	Fruits []string
 }
 
 // 结构体属性tag 自定义 json 中 key 的名称
 type response2 struct {
-	Page int `json:"page"`
-	Total int `json:"total"`
+	Page   int      `json:"page"`
+	Total  int      `json:"total"`
 	Fruits []string `json:"fruits"`
 }
-
 
 func main() {
 
@@ -37,16 +36,16 @@ func main() {
 	fmt.Println(string(byteMap))
 
 	res1 := &response1{
-		Page: 1,
-		total: 100,
+		Page:   1,
+		total:  100,
 		Fruits: []string{"Apple", "Pear"},
 	}
 	byteRes, _ := json.Marshal(res1)
 	fmt.Println(string(byteRes))
 
 	res2 := &response2{
-		Page: 2,
-		Total: 100,
+		Page:   2,
+		Total:  100,
 		Fruits: []string{"Apple", "Pear"},
 	}
 	byteRes2, _ := json.Marshal(res2)
@@ -61,6 +60,5 @@ func main() {
 
 	num := dat["num"].(float64)
 	fmt.Println(num)
-
 
 }

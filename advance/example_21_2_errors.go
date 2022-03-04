@@ -1,11 +1,11 @@
 package main
 
 import (
-	"os"
-	"log"
 	"fmt"
+	"log"
 	"math"
 	"net"
+	"os"
 )
 
 /*
@@ -22,7 +22,6 @@ func Sqrt(f float64) (float64, error) {
 	return math.Sqrt(f), nil
 }
 
-
 func main() {
 
 	file, err := os.Open("1.txt")
@@ -37,7 +36,6 @@ func main() {
 	fmt.Println("file content", string(b))
 
 	fmt.Printf("%T\n", file)
-
 
 	// error 接口的实现
 	f, err := Sqrt(-1)

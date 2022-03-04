@@ -19,10 +19,9 @@ func (c Country) PrintStr() {
 	fmt.Println(c.Name)
 }
 
-func (c City) PrintStr()  {
+func (c City) PrintStr() {
 	fmt.Println(c.Name)
 }
-
 
 func main() {
 
@@ -32,4 +31,3 @@ func main() {
 	c1.PrintStr()
 	c2.PrintStr()
 }
-

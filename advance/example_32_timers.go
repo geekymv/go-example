@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -12,7 +12,6 @@ func main() {
 	// channel block
 	<-timer1.C
 	fmt.Println("Timer 1 fired")
-
 
 	timer2 := time.NewTimer(time.Second)
 	go func() {

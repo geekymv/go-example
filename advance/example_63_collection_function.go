@@ -37,7 +37,7 @@ func All(vs []string, f func(string) bool) bool {
 	return true
 }
 
-func Filter(vs[] string, f func(string) bool) []string {
+func Filter(vs []string, f func(string) bool) []string {
 	vsf := make([]string, 0, 10)
 
 	//fmt.Println(len(vsf))
@@ -51,7 +51,7 @@ func Filter(vs[] string, f func(string) bool) []string {
 	return vsf
 }
 
-func Map(vs[] string, f func(string) string) []string {
+func Map(vs []string, f func(string) string) []string {
 	vsm := make([]string, len(vs))
 	for i, v := range vs {
 		vsm[i] = f(v)
@@ -59,10 +59,9 @@ func Map(vs[] string, f func(string) string) []string {
 	return vsm
 }
 
-
 func main() {
 
-	var strs = []string {"an", "any", "cool", "money"}
+	var strs = []string{"an", "any", "cool", "money"}
 	fmt.Println(Index(strs, "cool"))
 
 	fmt.Println(Include(strs, "any"))

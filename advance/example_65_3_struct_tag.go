@@ -1,13 +1,13 @@
 package main
 
 import (
-	"reflect"
 	"fmt"
+	"reflect"
 )
 
 type StudentInfo struct {
 	Name string `info:"name" doc:"学生名称"`
-	Age int `info:"age" doc:"学生年龄"`
+	Age  int    `info:"age" doc:"学生年龄"`
 }
 
 func printTag(stu interface{}) {
@@ -24,5 +24,3 @@ func main() {
 	var stu StudentInfo
 	printTag(&stu)
 }
-
-

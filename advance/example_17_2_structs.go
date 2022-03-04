@@ -8,7 +8,7 @@ type MyPoint struct {
 }
 
 func newPoint(x, y int) *MyPoint {
-	return &MyPoint{X: x, Y: y,}
+	return &MyPoint{X: x, Y: y}
 }
 
 func main() {
@@ -18,6 +18,3 @@ func main() {
 	fmt.Printf("%v", point)
 
 }
-
-
-

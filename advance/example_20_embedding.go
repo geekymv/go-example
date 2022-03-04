@@ -38,7 +38,6 @@ func main() {
 	ct.str = "i am ct"
 	fmt.Println(ct)
 
-
 	type describer interface {
 		describe() string
 	}

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"sync"
+	"time"
 )
 
 // if a WaitGroup is explicitly passed into functions, it should be done by pointer.

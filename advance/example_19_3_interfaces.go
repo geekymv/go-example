@@ -23,15 +23,14 @@ func (c City2) ToString() string {
 }
 
 // 参数类型为接口（面向接口编程）
-func PrintStr(p Stringable)  {
+func PrintStr(p Stringable) {
 	fmt.Println(p.ToString())
 }
 
-func main()  {
+func main() {
 	c1 := Country2{"China"}
 	c2 := City2{"Hefei"}
 
 	PrintStr(c1)
 	PrintStr(c2)
 }
-

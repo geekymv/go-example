@@ -1,13 +1,13 @@
 package main
 
 import (
+	"bytes"
+	"fmt"
 	"io"
 	"os"
-	"fmt"
-	"bytes"
 )
 
-const debug  = false
+const debug = false
 
 func main() {
 

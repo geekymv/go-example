@@ -14,7 +14,6 @@ func myWorker(id int, jobs <-chan int, results chan<- int) {
 	}
 }
 
-
 func main() {
 
 	const numJobs = 5
@@ -22,14 +21,14 @@ func main() {
 	results := make(chan int, numJobs)
 
 	// 每个 job 执行3次
-	for id := 1; id <=3; id++ {
+	for id := 1; id <= 3; id++ {
 		go myWorker(id, jobs, results)
 	}
 
 	time.Sleep(time.Second * 5)
 
 	// 5个 job
-	for j :=1;j <= numJobs; j++ {
+	for j := 1; j <= numJobs; j++ {
 		jobs <- j
 	}
 
