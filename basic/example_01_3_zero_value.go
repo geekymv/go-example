@@ -7,7 +7,7 @@ import (
 	"sync"
 )
 
-// 零值可用
+// 零值可用，并非所有类型都是零值可用的
 func main() {
 	// 切片零值可用
 	var zeroSlice []int

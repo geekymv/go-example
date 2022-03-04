@@ -51,10 +51,7 @@ func (s *Server) Handle(conn net.Conn) {
 
 	// TODO 判断 magic 是否合法
 
-	client := &c.Client{
-		ClientId: "1",
-		Conn:     conn,
-	}
+	client := c.NewClient(conn)
 	// 保存连接
 	s.conns.Store(conn.RemoteAddr(), client)
 
