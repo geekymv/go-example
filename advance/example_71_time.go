@@ -22,4 +22,8 @@ func main() {
 	fmt.Println(unsafe.Sizeof(i1))
 	fmt.Println(unsafe.Sizeof(i2))
 
+	// 日期格式转换
+	t2 := time.Now().Unix()
+	tf := time.Unix(t2, 0).Format(TIME_FORMAT)
+	fmt.Println(tf)
 }
