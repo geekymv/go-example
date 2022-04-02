@@ -7,7 +7,6 @@ type File struct {
 	nepipe  int
 }
 
-
 /*
 new 的作用
 It's a built-in function that allocates memory, but unlike its namesakes in some other languages it does not initialize the memory,
@@ -16,8 +15,7 @@ a value of type *T. In Go terminology, it returns a pointer to a newly allocated
 
 make 作用于 slice map channel
 
- */
-
+*/
 
 /*
 new(File) 等价于 &File{}
@@ -37,7 +35,7 @@ func NewFile1(fd int, name string) *File {
 		return nil
 	}
 	// 这种方式所有字段都需要指定
-	f := File{fd, name, nil, 0}
+	f := File{fd, name, "", 0}
 	return &f
 }
 
@@ -46,10 +44,10 @@ func NewFile2(fd int, name string) *File {
 		return nil
 	}
 	/*
-	by labeling the elements explicitly as field:value pairs,
-	the initializers can appear in any order,
-	with the missing ones left as their respective zero values
-	 */
+		by labeling the elements explicitly as field:value pairs,
+		the initializers can appear in any order,
+		with the missing ones left as their respective zero values
+	*/
 	return &File{fd: fd, name: name}
 }
 
