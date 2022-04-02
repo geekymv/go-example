@@ -21,12 +21,10 @@ func main() {
 	pid := os.Getpid()
 	fmt.Printf("process id %d\n", pid)
 
-	for {
-		select {
-		case s := <-signalChan:
-			fmt.Printf("signal %v\n", s)
-			goto stop
-		}
+	select {
+	case s := <-signalChan:
+		fmt.Printf("signal %v\n", s)
+		goto stop
 	}
 
 stop:
