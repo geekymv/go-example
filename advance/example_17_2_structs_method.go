@@ -9,6 +9,7 @@ type Foo struct {
 /*
 方法接收者的值类型和指针类型
 https://mp.weixin.qq.com/s/Av3DrzDXa2cjjBbtkj6wuw
+https://gosamples.dev/print-address/
 */
 func (f *Foo) SetP(v int, callBy string) {
 	fmt.Printf("f1 addr:%p\n", f)
