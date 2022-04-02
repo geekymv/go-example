@@ -11,6 +11,7 @@ func main() {
 	duration := 5 * time.Second
 
 	ctx, cancel := context.WithTimeout(context.Background(), duration)
+	// Not doing this will cause memory leaks.
 	defer cancel()
 
 	// Create a channel to receive a signal that work is done.
