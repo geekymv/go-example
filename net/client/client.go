@@ -29,9 +29,8 @@ func NewClient(conn net.Conn) *Client {
 
 func (c *Client) IOLoop() {
 	// 读取内容
-	reader := bufio.NewReaderSize(c, 16*1024)
 	for {
-		line, err := reader.ReadSlice('\n')
+		line, err := c.Reader.ReadSlice('\n')
 		if err != nil {
 			log.Println("close conn", c.RemoteAddr(), err)
 			c.Close()
