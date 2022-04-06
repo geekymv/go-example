@@ -25,6 +25,14 @@ func main() {
 		log.Fatalln(err)
 	}
 	consumer.AddHandler(myMsgHandler{})
+
+	/*
+		// nsq.HandlerFunc() 类型转换
+		consumer.AddHandler(nsq.HandlerFunc(func(message *nsq.Message) error {
+
+			return nil
+		}))
+	*/
 	consumer.ConnectToNSQD("127.0.0.1:4150")
 
 	sigChan := make(chan os.Signal, 1)
