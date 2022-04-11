@@ -26,6 +26,7 @@ func main() {
 		go func() {
 			p := pool.Get()
 			fmt.Printf("%v\n", &p)
+			// 用完了 放回去
 			pool.Put(p)
 			wg.Done()
 		}()
