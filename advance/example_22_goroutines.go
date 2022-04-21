@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func f(from string) {
+func ff(from string) {
 	for i := 0; i < 3; i++ {
 		fmt.Println(from, ":", i)
 	}
@@ -13,8 +13,8 @@ func f(from string) {
 
 func main() {
 
-	f("direct")
-	go f("goroutine")
+	ff("direct")
+	go ff("goroutine")
 
 	// 匿名函数
 	go func(msg string) {
