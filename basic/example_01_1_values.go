@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+	"strconv"
+	"unsafe"
+)
 
 func main() {
 	fmt.Println("go" + " lang")
@@ -10,4 +15,10 @@ func main() {
 	fmt.Println(true || false)
 	fmt.Println(!true)
 
+	// amd64
+	fmt.Println("arch", runtime.GOARCH)
+	// 8 byte
+	fmt.Println("int", unsafe.Sizeof(int(0)))
+	// 64 bit
+	fmt.Println("int", strconv.IntSize)
 }
