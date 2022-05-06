@@ -27,8 +27,9 @@ func main() {
 	}
 
 	fmt.Println("---------------------------")
+	// %q 带引号字符串或字符
 	for _, s := range str {
-		fmt.Printf("%q\n", s)
+		fmt.Printf("%c - %q\n", s, s)
 	}
 
 	fmt.Println("---------------------------")
