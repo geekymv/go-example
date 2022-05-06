@@ -42,6 +42,11 @@ func main() {
 
 	var a1 rune = '🦍'
 	a2 := '🦍'
-	fmt.Printf("%c - %s\n", a1, reflect.TypeOf(a1))
-	fmt.Printf("%c - %s\n", a2, reflect.TypeOf(a2))
+	// %c 字符(unicode 码点)
+	fmt.Printf("%c - %U - %s\n", a1, a1, reflect.TypeOf(a1))
+	fmt.Printf("%c - %U - %s\n", a2, a2, reflect.TypeOf(a2))
+
+	// Unicode Code Point
+	var a3 rune = '世'
+	fmt.Println(a3, reflect.TypeOf(a3))
 }
