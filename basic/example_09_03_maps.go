@@ -12,7 +12,7 @@ func main() {
 	}
 	v1["a"] = struct{}{}
 
-	v1, ok = m1["1"]
+	//v1, ok = m1["1"]
 	v1["b"] = struct{}{}
 
 	fmt.Println("m1", m1)
