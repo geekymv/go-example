@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"runtime/debug"
 )
 
 func fun(x int) {
@@ -21,6 +22,7 @@ func printStack() {
 }
 
 func main() {
-	defer printStack()
+	//defer printStack()
+	defer debug.PrintStack()
 	fun(3)
 }

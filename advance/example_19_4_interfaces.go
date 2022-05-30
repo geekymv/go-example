@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const debug = false
+const debugf = false
 
 func main() {
 
@@ -24,7 +24,7 @@ func main() {
 
 	//var buf *bytes.Buffer
 	var buf io.Writer
-	if debug {
+	if debugf {
 		buf = new(bytes.Buffer)
 	}
 
